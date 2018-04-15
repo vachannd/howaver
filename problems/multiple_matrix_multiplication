@@ -29,3 +29,5 @@ Given an array p[] which represents the chain of matrices such that the ith matr
   Output: 6000
   There are only two matrices of dimensions 10x20 and 20x30. So there
   is only one way to multiply the matrices, cost of which is 10*20*30
+
+  GeeksforGeeks Link: https://www.geeksforgeeks.org/dynamic-programming-set-8-matrix-chain-multiplication/
