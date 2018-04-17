@@ -1,7 +1,7 @@
 __author__ = "Sudheer"
 
 
-def optimal_matrix_multiplication_order(order_list: list) -> int:
+def get_optimal_matrix_multiplication_operations(order_list: list) -> int:
     pass
 
 
