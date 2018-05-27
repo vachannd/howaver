@@ -43,3 +43,4 @@ def optimal_matrix_multiplication_operations(order_list: list) -> int:
     multiplication_operation_cost_map = {}
     matrix_orders = list(zip(order_list, order_list[1:]))
     return get_total_operations(matrix_orders, multiplication_operation_cost_map)
+
