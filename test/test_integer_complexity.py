@@ -1,6 +1,6 @@
 __author__ = "Sudheer"
 
-from random_problems import integer_complexity
+from src import integer_complexity
 
 actual_integer_complexities = []
 expected_integer_complexities = [1, 2, 3, 4, 5, 5, 6, 6, 6, 7, 8, 7, 8, 8, 8, 8, 9, 8, 9, 9, 9, 10, 11,
