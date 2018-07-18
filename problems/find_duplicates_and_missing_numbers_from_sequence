@@ -1,0 +1,14 @@
+Given an unsorted array of n elements which contains elements from 0 to n-1, with any of these numbers appearing any
+number of times. The array will contain some duplicates in place of numbers that should have been present in the sequence.
+
+Challenge:
+Find all the missing numbers and the duplicates that took their place in the array. Find these in O(n) time and constant
+space.
+
+Example Scenario:
+n = 5
+Array -> { 2, 2, 4, 0, 1}
+
+Here the result should be as follows:
+Duplicate Elements -> [2]
+Missing ELements -> [3]
