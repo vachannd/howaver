@@ -1,6 +1,5 @@
 # Random-Problems
-# General Rules
 
-1. Solve 2 problems every 3 days.
-2. Have your own branch to push code.
-3. Code review must be done by the other person and only then pushed to master.
+Repository of solutions to problems found on the internet.
+Problem statements are in problems folder.
+Solutions are in src.
