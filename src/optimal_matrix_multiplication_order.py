@@ -30,7 +30,9 @@ def get_total_operations(orders, cost_map):
         left_half_cost = get_total_operations(left_half, cost_map)
         right_half_cost = get_total_operations(right_half, cost_map)
         total_operation_cost = left_half_cost + right_half_cost
-        final_product_cost = get_operations((left_half[0][0], left_half[-1][1]), (right_half[0][0], right_half[-1][1]))
+        final_product_cost = get_operations(
+            (left_half[0][0], left_half[-1][1]), (right_half[0][0], right_half[-1][1])
+        )
         total_operation_cost = total_operation_cost + final_product_cost
         current_optimal_cost = get_cost(orders, cost_map)
         if current_optimal_cost is None or total_operation_cost < current_optimal_cost:
@@ -43,4 +45,3 @@ def optimal_matrix_multiplication_operations(order_list: list) -> int:
     multiplication_operation_cost_map = {}
     matrix_orders = list(zip(order_list, order_list[1:]))
     return get_total_operations(matrix_orders, multiplication_operation_cost_map)
-

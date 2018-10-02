@@ -1,6 +1,7 @@
 # Random-Problems
-# General Rules
 
-1. Solve 2 problems every 3 days.
-2. Have your own branch to push code.
-3. Code review must be done by the other person and only then pushed to master.
+Repository of solutions to problems found on the internet.
+Written in Python 3.6.
+
+<a href = "https://docs.pytest.org/en/latest/">Pytest</a> is the unit tests framework being used.<br>
+<a href = "https://github.com/ambv/black">Black</a> is the code formatter being used.
