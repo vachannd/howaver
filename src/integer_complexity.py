@@ -33,7 +33,9 @@ def fill_complexities_for_all_multiples(x, num):
         if x * y > num:
             break
         else:
-            if x * y not in complexity_map or is_sum_of_factor_complexities_minimum(x, y):
+            if x * y not in complexity_map or is_sum_of_factor_complexities_minimum(
+                x, y
+            ):
                 complexity_map[x * y] = complexity_map[x] + complexity_map[y]
 
 
