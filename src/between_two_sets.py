@@ -9,6 +9,7 @@ def inbetween_number_gen(lower_bound: int, upper_bound: int):
     for x in range(lower_bound, upper_bound + 1):
         yield x
 
+
 def _lcm_of_sequence(sequence: typing.List[int]):
     """
     This method is only educational. It will break for large numbers.
@@ -16,11 +17,18 @@ def _lcm_of_sequence(sequence: typing.List[int]):
     :return: LCM of a list
     """
     return functools.reduce(
-        lambda x, y: (lambda a, b: next(i for i in range(max(a, b), a * b + 1) if i % a == 0 and i % b == 0))(x, y),
-        sequence)
+        lambda x, y: (
+            lambda a, b: next(
+                i for i in range(max(a, b), a * b + 1) if i % a == 0 and i % b == 0
+            )
+        )(x, y),
+        sequence,
+    )
+
 
 def lcm_of_sequence(sequence: typing.List[int]):
     return functools.reduce(lambda a, b: a * b // math.gcd(a, b), sequence)
+
 
 def gcd_of_sequence(sequence: typing.List[int]):
     return functools.reduce(math.gcd, sequence)
@@ -48,6 +56,7 @@ def get_inbetween_factor_count_brute_force(a: typing.List[int], b: typing.List[i
                 inbetween_factors.append(x)
     return len(inbetween_factors)
 
+
 def get_inbetween_factor_count_lcm_gcd(a: typing.List[int], b: typing.List[int]):
     """
     Calculates the number of inbetween factors present between to sets. See <b>between_two_sets<b>
@@ -59,7 +68,9 @@ def get_inbetween_factor_count_lcm_gcd(a: typing.List[int], b: typing.List[int])
     if a[-1] > b[0]:
         return 0
     inbetween_factors = []
-    lcm_array_one = _lcm_of_sequence(a)     #LCM of a list with large numbers will take very long.
+    lcm_array_one = _lcm_of_sequence(
+        a
+    )  # LCM of a list with large numbers will take very long.
     gcd_array_two = gcd_of_sequence(b)
     for x in inbetween_number_gen(lcm_array_one, gcd_array_two):
         for array_one_ele in a:
@@ -73,6 +84,7 @@ def get_inbetween_factor_count_lcm_gcd(a: typing.List[int], b: typing.List[int])
                 inbetween_factors.append(x)
 
     return len(inbetween_factors)
+
 
 def get_inbetween_factor_count_optimal(a: typing.List[int], b: typing.List[int]):
     """
